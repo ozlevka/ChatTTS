@@ -162,7 +162,7 @@ def main():
             outputs=sample_audio_code_input,
         ).then(fn=lambda: gr.Info("Sampled Audio Code generated at another Tab."))
 
-        # 使用Gradio的回调功能来更新数值输入框
+        # Use Gradio's callback feature to update the numeric input box
         voice_selection.change(
             fn=on_voice_change, inputs=voice_selection, outputs=audio_seed_input
         )

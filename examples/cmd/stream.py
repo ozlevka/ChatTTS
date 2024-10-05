@@ -5,7 +5,7 @@ import numpy as np
 from tools.audio import float_to_int16
 
 
-# 流式推理数据获取器，支持流式获取音频编码字节流
+# Stream inference data fetcher, supports streaming audio encoded byte streams
 class ChatStreamer:
     def __init__(self, base_block_size=8000):
         self.base_block_size = base_block_size
@@ -46,7 +46,7 @@ class ChatStreamer:
             format_data = stream_wav
         return format_data
 
-    # 数据格式转化
+    # Data format conversion
     @staticmethod
     def formatted(data, output_format="PCM16_byte"):
         if output_format == "PCM16_byte":
